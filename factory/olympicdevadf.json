@@ -1,0 +1,9 @@
+{
+	"name": "olympicdevadf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0793727c-222f-4219-a646-f55cb87b86d1",
+		"tenantId": "512c67f5-c443-4ce0-936b-dc7125527b46"
+	}
+}
