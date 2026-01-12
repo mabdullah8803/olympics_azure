@@ -75,17 +75,16 @@
 									}
 								},
 								"sink": {
-									"type": "DelimitedTextSink",
+									"type": "ParquetSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings"
 									},
 									"formatSettings": {
-										"type": "DelimitedTextWriteSettings",
-										"quoteAllText": true,
-										"fileExtension": ".txt"
+										"type": "ParquetWriteSettings"
 									}
 								},
 								"enableStaging": false,
+								"enableSkipIncompatibleRow": true,
 								"translator": {
 									"type": "TabularTranslator",
 									"typeConversion": true,
@@ -109,7 +108,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "sink_bronze",
+									"referenceName": "sink_bronze_parq",
 									"type": "DatasetReference",
 									"parameters": {
 										"p_folder_name": {
